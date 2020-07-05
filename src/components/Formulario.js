@@ -36,7 +36,7 @@ const Formulario = ({guardarBusquedaLetra}) => {
                         onSubmit={buscarinformacion}
                         >
                             <fieldset>
-                                <legend className="text-center">Buscador de Comida</legend>
+                                <legend className="text-center">Buscador de Canciones</legend>
                                 <div className="row">
                                     <div className="col-md-6">
                                         <div className="form-group">
@@ -53,7 +53,7 @@ const Formulario = ({guardarBusquedaLetra}) => {
                                     </div>
                                     <div className="col-md-6">
                                         <div className="form-group">
-                                            <label>Cancion</label>
+                                            <label>Canción</label>
                                             <input 
                                                 type="text"
                                                 className="form-control"
