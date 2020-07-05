@@ -1,7 +1,6 @@
 import React from 'react';
 const Info = ({informacion}) => {
-    if (informacion === {}) return;
-    console.log(informacion);
+    if(Object.keys(informacion).length === 0 ) return null;
     return ( 
         <div className="card border-light">
             <div className="card-header bg-primary text-light font-weight-bold">
@@ -9,6 +8,9 @@ const Info = ({informacion}) => {
             </div>
             <div className="card-body">
                 <img src={informacion.strArtistThumb}  alt={informacion.strArtist}/>
+                <p className="card-text">
+                    {informacion.strBiographyES}
+                </p>
                 <p className="card-text">
                     <a href={`https://${informacion.strFacebook}`} target="_blank" rel="noopener noreferrer">
                         <i className="fab fa-facebook"></i>

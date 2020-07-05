@@ -28,7 +28,7 @@ function App() {
       if(informacion.data.artists){
         guardarInformacion(informacion.data.artists[0]);
       }else{
-        guardarInformacion(undefined);
+        guardarInformacion({});
       }
           
     }
