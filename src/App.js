@@ -22,10 +22,15 @@ function App() {
         axios(url),
         axios(url2)
       ]);
-      guardarLetra(letra.data.lirycs);
-      guardarInformacion(informacion.data.artists[0]);
-      
-      //guardarLetra(resultado.data.lyrics);
+      guardarLetra(letra.data.lyrics);
+      // console.log(letra.data.lyrics);
+      //console.log(informacion.data.artists[0]); 
+      if(informacion.data.artists){
+        guardarInformacion(informacion.data.artists[0]);
+      }else{
+        guardarInformacion(undefined);
+      }
+          
     }
     consultarApiLetra();
   },[busquedaletra, informacion])
